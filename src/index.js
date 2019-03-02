@@ -1,6 +1,5 @@
-// JS Goes here - ES6 supported
-
 import "./css/main.css";
 
-// Say hello
-console.log("🦊 Hello! Edit me in src/index.js");
+// JS Goes here - ES6 supported
+// Remove .no-js from html element
+document.documentElement.className = document.documentElement.className.replace("no-js","js");
