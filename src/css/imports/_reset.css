@@ -2,6 +2,12 @@
   Define your resets here or use something like Normalize.css if you like
  */
 
+ *,
+::before,
+::after{
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
