@@ -1,9 +1,31 @@
-baseurl = "/"
+# https://github.com/gohugoio/hugo/blob/master/docs/config/_default/config.toml
+baseURL = "https://stunning-real-estate-basic-template.netlify.com/"
+defaultContentLanguage = "en"
+enableEmoji = true
 languageCode = "en-us"
 languageLang = "en"
-title = "My new Victor-Hugo site"
+metaDataFormat = "yaml"
+title = "Stunning Real Estate Basic Template"
+# googleAnalytics = ""
+# pluralizeListTitles = false
+# disableAliases = true
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+enableRobotsTXT = true
+buildDrafts = true
+
+[blackfriday]
+plainIDAnchors = true
+# See https://github.com/gohugoio/hugo/issues/2424
+hrefTargetBlank = false
+extensions = ["hardLineBreak"]
+
+[author]
+name = "Stuart Stephens"
+[social]
+twitter = "StuartAStephens"
+
+[params]
+  description = "Custom Web Design for Modern Businesses"
