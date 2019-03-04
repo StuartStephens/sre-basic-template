@@ -29,3 +29,22 @@ twitter = "StuartAStephens"
 
 [params]
   description = "Custom Web Design for Modern Businesses"
+
+[menu]
+    [[menu.main]]
+    identifier = "hero"
+    name       = "Hero Scenes"
+    url        = "/hero-scenes/"
+    weight     = 1
+
+    [[menu.main]]
+    identifier = "temp1"
+    name       = "temp1"
+    url        = "/temp1/"
+    weight     = 2
+
+    [[menu.main]]
+    identifier = "temp2"
+    name       = "temp2"
+    url        = "/temp2/"
+    weight     = 3

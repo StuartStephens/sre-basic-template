@@ -63,7 +63,7 @@
     {{ end }}
 
   </head>
-  <body class="ma0 sans-serif{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+  <body class="ma0 sans-serif relative{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     <!-- Navigation -->
     {{ block "nav" . }}{{ partial "site-nav.html" . }}{{ end }}
     <!-- Header -->

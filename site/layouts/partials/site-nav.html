@@ -1,0 +1,23 @@
+<nav class="o-nav absolute top-0 z-999 pv3 ">
+	<div class="o-container flex flex-row">
+
+		<div class="w-third w-25-m w-20-l">
+			<a class="lh-solid dib" href="/">{{ partial "logo" . }}</a>
+		</div>
+
+		<div class="c-mobile-nav">
+    	<div class="c-mobile-nav__toggle"><span></span></div>
+		</div>
+
+		<!-- https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+		<ul class="">
+			{{ $currentNode := . }}
+      {{ range .Site.Menus.main }}
+        <li>
+        	<a class="c-nav-link link dim dib mh1 sans-serif lh-solid{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+		</ul>
+
+	</div>
+</nav>
