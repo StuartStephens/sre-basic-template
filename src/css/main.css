@@ -28,6 +28,7 @@
 @import './imports/_normalize';
 @import './imports/_reset';
 @import './imports/modular-scale';
+@import './fontello';
 
 /* Modules */
 @import './imports/_box-sizing';

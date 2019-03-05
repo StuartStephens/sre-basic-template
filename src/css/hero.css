@@ -1,6 +1,6 @@
 .o-hero{
 	height: 100vh;
-	/*background: url(https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) center/ cover;*/
+	background: url(https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) center/ cover;
 	position: relative;
 	overflow: hidden;
 	&::before{

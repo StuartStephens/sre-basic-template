@@ -15,6 +15,7 @@ body {
   height: 100%;
 }
 
-figure{
+figure, ul, ol{
 	margin: 0;
+	padding: 0;
 }

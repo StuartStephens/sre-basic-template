@@ -1,23 +1,48 @@
-<nav class="o-nav absolute top-0 z-999 pv3 ">
-	<div class="o-container flex flex-row">
-
-		<div class="w-third w-25-m w-20-l">
-			<a class="lh-solid dib" href="/">{{ partial "logo" . }}</a>
+<header class="z-9999 w-100">
+	<nav class="o-nav">
+		<div class="o-container relative flex-l flex-row-l h-100">
+	
+			<div class="w-third w-20-l">
+				{{ partial "logo" . }}
+			</div>
+	
+			<!-- Navbar toggle menu button -->
+			<div class="c-nav-toggle">
+	    	<a class="c-nav-toggle__button"><span></span></a>
+			</div>
+	
+			<!-- https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+			<ul class="w-60-l">
+				{{ $currentNode := . }}
+	      {{ range .Site.Menus.main }}
+	        <li>
+	        	<a class="c-nav-link link dim dib mh3-l ph3 white sans-serif lh-solid{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+	        </li>
+	      {{ end }}
+			</ul>
+	
+			<div class="dn db-l w-20-l tc o-nav__list">
+				<a href="#!!" class="white no-underline">(123) 456-7890</a>
+			</div>
+	
+			
+	
 		</div>
-
-		<div class="c-mobile-nav">
-    	<div class="c-mobile-nav__toggle"><span></span></div>
+	</nav>
+	
+	
+	<!-- Mobile overlay Nav -->
+	<div class="c-nav-toggle__overlay">
+		<div class="o-container h-100">
+			<ul class="tr pt5 f3">
+				{{ $currentNode := . }}
+			    {{ range .Site.Menus.main }}
+			      <li class="pv3">
+			      	<a class="c-nav-link link dim dib white sans-serif lh-solid{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+			      </li>
+			    {{ end }}
+			    <li class="pv3"><a href="" class="white no-underline">(123) 456-7890</a></li>
+			</ul>
 		</div>
-
-		<!-- https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
-		<ul class="">
-			{{ $currentNode := . }}
-      {{ range .Site.Menus.main }}
-        <li>
-        	<a class="c-nav-link link dim dib mh1 sans-serif lh-solid{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-      {{ end }}
-		</ul>
-
 	</div>
-</nav>
+</header>
